@@ -15,24 +15,20 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   const [list, setList] = useState([0]);
-
+  const deleteComponent = () => {
+    setList([]);
+  };
   const addComponent = () => {
     setList([...list, list.length]);
   };
 
   return (
     <>
-      {list.map((item, id) => (
+      {list.map((id) => (
         <Parent key={id} />
       ))}
       <button onClick={addComponent}>Add Child</button>
-      <button
-        onClick={() => {
-          this.removeChild(this.state.parent, this.state.child_count);
-        }}
-      >
-        X
-      </button>
+      <button onClick={deleteComponent}>x</button>
     </>
   );
 }
