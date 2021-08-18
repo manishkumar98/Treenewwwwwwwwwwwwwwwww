@@ -8,13 +8,11 @@ import Child from "./Child";
 
 export default function Parent() {
   const [list, setList] = useState([0]);
-  const [count, setCount] = useState(0);
+  //const [count, setCount] = useState(0);
   const addComponent = () => {
     setList([...list, list.length]);
   };
-  const increment = () => {
-    setCount(count + 1);
-  };
+
   const deleteComponent = () => {
     setList([]);
   };
@@ -28,7 +26,6 @@ export default function Parent() {
 
       <button onClick={addComponent}>Add more child</button>
       <button onClick={deleteComponent}>x</button>
-      <p>Counter : {count}</p>
     </>
   );
 }

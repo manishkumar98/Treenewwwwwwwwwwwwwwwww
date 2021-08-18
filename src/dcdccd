@@ -33,6 +33,8 @@ class Parent extends React.Component {
   }
 }
 
+ <p>Counter : {count}</p>
+
 export default Parent;
 */
 /*

@@ -26,8 +26,6 @@ class Child extends React.Component {
   render() {
     return (
       <>
-        <p>{this.state.child_count}</p>
-
         <br />
         <br />
         <button onClick={() => this.handleCount()}>+</button>
